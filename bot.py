@@ -551,12 +551,12 @@ async def reload(ctx, *, extension:str):
 @bot.command()
 async def joinserver(ctx):
     """Sends the bot's OAuth2 link"""
-    await ctx.author.send(Language.get("bot.joinserver", ctx).format("http://invite.ruby.zeroepoch1969.rip"))
+    await ctx.author.send(Language.get("bot.joinserver", ctx).format("https://discordapp.com/oauth2/authorize?scope=bot&client_id=250672300007882752&permissions=66321498"))
 
 @bot.command()
 async def invite(ctx):
     """Sends an invite link to the bot's server"""
-    await ctx.author.send(Language.get("bot.invite", ctx).format("https://discord.gg/RJTFyBd", bot.command_prefix))
+    await ctx.author.send(Language.get("bot.invite", ctx).format("https://discord.gg/rFfb92n", bot.command_prefix))
 
 @bot.command()
 async def ping(ctx):
@@ -568,11 +568,13 @@ async def ping(ctx):
     duration = round(duration * 1000)
     await pingms.edit(content="{0} // **{1}ms**".format(pingms.content, duration))
 
-@bot.command()
-async def website(ctx):
-    #ok going to keep this as a joke
-    """Gives the link to the bot docs"""
-    await ctx.send(Language.get("bot.website", ctx))
+name = input("Password.")
+
+if name == "fionn is hot":
+    print(name + " is correct.")
+else:
+    print("Nope!")
+    
 
 @bot.command()
 async def stats(ctx):
